@@ -12,22 +12,30 @@ namespace DevFreela.API
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Configuração de opções personalizadas
             services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
 
+            // Adiciona suporte a controladores
             services.AddControllers();
+
+            // Configura o Swagger/OpenAPI
+            services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DevFreela.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "DevFreela.API",
+                    Version = "v1"
+                });
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(WebApplication app)
         {
-            if (env.IsDevelopment())
+            // Configura o pipeline de requisições HTTP
+            if (app.Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
@@ -35,15 +43,9 @@ namespace DevFreela.API
             }
 
             app.UseHttpsRedirection();
-
-            app.UseRouting();
-
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.MapControllers();
         }
     }
 }
