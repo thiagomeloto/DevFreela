@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-Asp Net Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {}
+    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-Asp Net Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {
+    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-Asp Net Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+        "projectUniqueName": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
         "projectName": "DevFreela.API",
-        "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-Asp Net Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+        "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
         "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-Asp Net Core\\DevFreela\\DevFreela.API\\obj\\",
+        "outputPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",

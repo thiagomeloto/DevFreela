@@ -1,11 +1,19 @@
 ﻿using DevFreela.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace DevFreela.API.Controllers
 {
     [Route("api/projects")]
     public class ProjectsController : Controller
     {
+        private readonly OpeningTimeOption _openingTimeOption;
+
+        public ProjectsController(IOptions<OpeningTimeOption> openingTimeOption)
+        {
+            _openingTimeOption = openingTimeOption.Value;
+        }
+
         [HttpGet]
         public IActionResult Get(string query)
         {
@@ -49,6 +57,24 @@ namespace DevFreela.API.Controllers
 
             //Remover
 
+            return NoContent();
+        }
+
+        [HttpPost("{id}/comments")]
+        public IActionResult PostComment(int id, [FromBody] CreateCommentModel createCommentModel)
+        {
+            return NoContent();
+        }
+
+        [HttpPut("{id}/start")]
+        public IActionResult Start(int id)
+        {
+            return NoContent();
+        }
+
+        [HttpPut("{id}/finish")]
+        public IActionResult Finish(int id)
+        {
             return NoContent();
         }
     }
