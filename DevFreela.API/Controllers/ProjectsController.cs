@@ -7,10 +7,11 @@ namespace DevFreela.API.Controllers
     [Route("api/projects")]
     public class ProjectsController : Controller
     {
-        private readonly OpeningTimeOption _openingTimeOption;
+        private readonly OpeningTimeOption _openingTimeOption; 
 
-        public ProjectsController(IOptions<OpeningTimeOption> openingTimeOption)
+        public ProjectsController(IOptions<OpeningTimeOption> openingTimeOption, ExampleClass exampleClass)
         {
+            exampleClass.Name = "Updated at ProjectController";
             _openingTimeOption = openingTimeOption.Value;
         }
 
