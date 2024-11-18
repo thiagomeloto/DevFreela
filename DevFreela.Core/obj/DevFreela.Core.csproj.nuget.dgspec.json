@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {}
+    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj": {
+    "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
-        "projectName": "DevFreela.API",
-        "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\DevFreela.API.csproj",
+        "projectUniqueName": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectName": "DevFreela.Core",
+        "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.API\\obj\\",
+        "outputPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -53,6 +53,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
