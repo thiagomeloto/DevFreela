@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "DevFreela.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        }
+      },
+      "DevFreela.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "DevFreela.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevFreela.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DevFreela.Core/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Core/DevFreela.Core.csproj",
+      "msbuildProject": "../DevFreela.Core/DevFreela.Core.csproj"
+    },
+    "DevFreela.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Infrastructure/DevFreela.Infrastructure.csproj",
+      "msbuildProject": "../DevFreela.Infrastructure/DevFreela.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "DevFreela.Core >= 1.0.0",
+      "DevFreela.Infrastructure >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\thiag\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+      "projectName": "DevFreela.Application",
+      "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+      "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+              "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+            },
+            "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\thiag\\Documents\\MENTORIA - .NET EXPERT 2024\\Projetos\\1-AspNet-Core\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -63,3 +63,7 @@ C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevF
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\DevFreela.API.pdb
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\DevFreela.API.genruntimeconfig.cache
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\ref\DevFreela.API.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\bin\Debug\net8.0\DevFreela.API.staticwebassets.endpoints.json
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\staticwebassets\msbuild.DevFreela.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
