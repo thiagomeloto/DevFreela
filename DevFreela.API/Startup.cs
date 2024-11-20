@@ -1,4 +1,7 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Services.Implementations;
+using DevFreela.Application.Services.Interfaces;
+using DevFreela.Infrastructure.Persistence;
 using Microsoft.OpenApi.Models;
 
 namespace DevFreela.API
@@ -16,6 +19,9 @@ namespace DevFreela.API
         {
             // Configuração de opções personalizadas
             services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
+
+            services.AddSingleton<DevFreelaDbContext>();
+            services.AddScoped<IProjectService, ProjectService>();
 
             //Singleton mantém o mesmo objeto para toda a aplicação. Mantém a mesma instância (mesmos dados) enquanto estiver inicializada.
             //services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });

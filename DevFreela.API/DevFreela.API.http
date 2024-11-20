@@ -1,6 +1,11 @@
-@DevFreela.API_HostAddress = http://localhost:5181
+@DevFreela.API_HostAddress = https://localhost:44344
 
 GET {{DevFreela.API_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+@query=abc
+GET {{DevFreela.API_HostAddress}}/api/projects?query={{query}}
 
 ###
