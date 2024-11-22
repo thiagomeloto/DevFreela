@@ -14,3 +14,5 @@ C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevF
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net8.0\refint\DevFreela.Infrastructure.dll
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net8.0\DevFreela.Infrastructure.pdb
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net8.0\ref\DevFreela.Infrastructure.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.Infrastructure\bin\Debug\net8.0\DevFreela.Infrastructure.runtimeconfig.json
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.Infrastructure\obj\Debug\net8.0\DevFreela.Infrastructure.genruntimeconfig.cache

@@ -1,0 +1,29 @@
+﻿using DevFreela.Core.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace DevFreela.Infrastructure.Persistence.Configurations
+{
+    public class ProjectCommentConfigurations : IEntityTypeConfiguration<ProjectComment>
+    {
+        public void Configure(EntityTypeBuilder<ProjectComment> builder)
+        {
+            builder
+                .HasKey(p => p.Id);
+
+            //Um ProjectComment tem somente um projeto, mas pode ter vários comentários.
+            builder
+                .HasOne(p => p.Project)
+                .WithMany(p => p.Comments)
+                .HasForeignKey(p => p.IdProject)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            //Um ProjectComment tem somente um usuário, mas pode ter vários comentários.
+            builder
+                .HasOne(p => p.User)
+                .WithMany(p => p.Comments)
+                .HasForeignKey(p => p.IdUser)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+    }
+}

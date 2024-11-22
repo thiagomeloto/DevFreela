@@ -147,7 +147,7 @@
     "Parameters": [
       {
         "Name": "createUserModel",
-        "Type": "DevFreela.API.Models.CreateUserModel",
+        "Type": "DevFreela.Application.InputModels.NewUserInputModel",
         "IsRequired": true
       }
     ],
@@ -163,7 +163,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
