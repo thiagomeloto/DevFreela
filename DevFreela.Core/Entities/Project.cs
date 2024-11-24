@@ -1,12 +1,13 @@
 ﻿using DevFreela.Core.Enums;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace DevFreela.Core.Entities
 {
-    public class GetProjectCommand : BaseEntity
+    public class Project : BaseEntity
     {
-        public GetProjectCommand(string title, string description, int idClient, int idFreelancer, decimal totalCost)
+        public Project(string title, string description, int idClient, int idFreelancer, decimal totalCost)
         {
             Title = title;
             Description = description;
@@ -28,7 +29,7 @@ namespace DevFreela.Core.Entities
         public decimal TotalCost { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime? StartedAt { get; private set; }
-        public DateTime FinishedAt { get; private set; }
+        public DateTime? FinishedAt { get; private set; }
         public ProjectStatusEnum Status { get; private set; }
         public List<ProjectComment> Comments { get; private set; }
 
@@ -57,7 +58,7 @@ namespace DevFreela.Core.Entities
                 FinishedAt = DateTime.Now;
             }
         }
-        
+
         public void Update(string title, string description, decimal totalCost)
         {
             Title = title;

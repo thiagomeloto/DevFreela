@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DevFreela.Infrastructure.Persistence.Configurations
 {
-    public class ProjectConfigurations : IEntityTypeConfiguration<GetProjectCommand>
+    public class ProjectConfigurations : IEntityTypeConfiguration<Project>
     {
-        public void Configure(EntityTypeBuilder<GetProjectCommand> builder)
+        public void Configure(EntityTypeBuilder<Project> builder)
         {
             //Adicionando chave primária para tabela Project
             builder
