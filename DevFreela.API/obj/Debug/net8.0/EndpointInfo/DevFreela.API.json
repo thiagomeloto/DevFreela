@@ -10,18 +10,35 @@
         "tags": [
           "Projects"
         ],
-        "parameters": [
-          {
-            "name": "query",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IActionResult"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IActionResult"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IActionResult"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -33,17 +50,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProjectInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProjectInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProjectInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             }
           }
@@ -96,17 +113,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectInputModel"
+                "$ref": "#/components/schemas/UpdateProjectCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectInputModel"
+                "$ref": "#/components/schemas/UpdateProjectCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectInputModel"
+                "$ref": "#/components/schemas/UpdateProjectCommand"
               }
             }
           }
@@ -159,17 +176,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCommentInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCommentInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCommentInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             }
           }
@@ -364,20 +381,28 @@
   },
   "components": {
     "schemas": {
-      "CreateCommentInputModel": {
+      "CreateProjectCommand": {
         "type": "object",
         "properties": {
-          "comment": {
+          "title": {
             "type": "string",
             "nullable": true
           },
-          "idProject": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "idClient": {
             "type": "integer",
             "format": "int32"
           },
-          "idUser": {
+          "idFreelancer": {
             "type": "integer",
             "format": "int32"
+          },
+          "totalCost": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -426,6 +451,10 @@
         "type": "integer",
         "format": "int32"
       },
+      "IActionResult": {
+        "type": "object",
+        "additionalProperties": false
+      },
       "LoginModel": {
         "type": "object",
         "properties": {
@@ -436,32 +465,6 @@
           "password": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "NewProjectInputModel": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "idClient": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "idFreelancer": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalCost": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -488,7 +491,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateProjectInputModel": {
+      "UpdateProjectCommand": {
         "type": "object",
         "properties": {
           "id": {

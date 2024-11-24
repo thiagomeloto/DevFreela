@@ -1,40 +1,34 @@
 ﻿using Dapper;
-using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.ViewModels;
-using DevFreela.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Dapper.SqlMapper;
 
-namespace DevFreela.Application.Services.Implementations
+namespace DevFreela.Application.Queries.GetAllSkills
 {
-    public class SkillService : ISkillService
-    {
-        private readonly DevFreelaDbContext _dbContext;
+    public class GetAllSkillsQueryHandler : IRequestHandler<GetAllSkillsQuery, List<SkillViewModel>>
+    {        
         private readonly string _connectionString;
-
-        public SkillService(DevFreelaDbContext dbContext, IConfiguration configuration)
-        {
-            _dbContext = dbContext;
+        public GetAllSkillsQueryHandler(IConfiguration configuration)
+        {            
             _connectionString = configuration.GetConnectionString("DevFreelaCs");
         }
-        public List<SkillViewModel> GetAll()
+        public async Task<List<SkillViewModel>> Handle(GetAllSkillsQuery request, CancellationToken cancellationToken)
         {
-            //Consulta utilizando o Dapper
             using (var sqlConnection = new SqlConnection())
             {
                 sqlConnection.Open();
 
                 var script = "SELECT Id, Description FROM Skills";
 
-                return sqlConnection.Query<SkillViewModel>(script).ToList();
+                var skills = await sqlConnection.QueryAsync<SkillViewModel>(script);
+
+                return skills.ToList();
             }
 
-            //Consulta utilizando o Entity Framework
+            // Consulta utilizando o Entity Framework
             //var skills = _dbContext.Skills;
 
             //var skillViewModel = skills

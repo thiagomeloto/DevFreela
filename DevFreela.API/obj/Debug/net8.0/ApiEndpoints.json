@@ -6,14 +6,18 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
+    "Parameters": [],
+    "ReturnTypes": [
       {
-        "Name": "query",
-        "Type": "System.String",
-        "IsRequired": false
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Microsoft.AspNetCore.Mvc.IActionResult, Microsoft.AspNetCore.Mvc.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
     "ContainingType": "DevFreela.API.Controllers.ProjectsController",
@@ -24,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "inputModel",
-        "Type": "DevFreela.Application.InputModels.NewProjectInputModel",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.CreateProject.CreateProjectCommand",
         "IsRequired": true
       }
     ],
@@ -61,8 +65,8 @@
         "IsRequired": true
       },
       {
-        "Name": "inputModel",
-        "Type": "DevFreela.Application.InputModels.UpdateProjectInputModel",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.UpdateProject.UpdateProjectCommand",
         "IsRequired": true
       }
     ],
@@ -98,8 +102,8 @@
         "IsRequired": true
       },
       {
-        "Name": "inputModel",
-        "Type": "DevFreela.Application.InputModels.CreateCommentInputModel",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.CreateProject.CreateProjectCommand",
         "IsRequired": true
       }
     ],

@@ -60,6 +60,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
             }
           },
           "imports": [

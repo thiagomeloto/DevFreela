@@ -1,6 +1,5 @@
 ﻿using DevFreela.API.Models;
-using DevFreela.Application.Services.Implementations;
-using DevFreela.Application.Services.Interfaces;
+using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -18,13 +17,8 @@ namespace DevFreela.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Configuração de opções personalizadas
-            services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
-
             var connectionString = Configuration.GetConnectionString("DevFreelaCs");
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
-            services.AddScoped<IProjectService, ProjectService>();
-            services.AddScoped<IUserService, UserService>();
 
             //Singleton mantém o mesmo objeto para toda a aplicação. Mantém a mesma instância (mesmos dados) enquanto estiver inicializada.
             //services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });
@@ -37,6 +31,8 @@ namespace DevFreela.API
 
             // Adiciona suporte a controladores
             services.AddControllers();
+
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateProjectCommand).Assembly));
 
             // Configura o Swagger/OpenAPI
             services.AddEndpointsApiExplorer();

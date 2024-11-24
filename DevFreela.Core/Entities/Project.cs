@@ -1,15 +1,12 @@
 ﻿using DevFreela.Core.Enums;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevFreela.Core.Entities
 {
-    public class Project : BaseEntity
+    public class GetProjectCommand : BaseEntity
     {
-        public Project(string title, string description, int idClient, int idFreelancer, decimal totalCost)
+        public GetProjectCommand(string title, string description, int idClient, int idFreelancer, decimal totalCost)
         {
             Title = title;
             Description = description;
