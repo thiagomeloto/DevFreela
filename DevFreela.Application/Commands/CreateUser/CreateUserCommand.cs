@@ -2,7 +2,7 @@
 
 namespace DevFreela.Application.Commands.CreateUser
 {
-    public class CreateUserCommand : IRequest<Unit>
+    public class CreateUserCommand : IRequest<int>
     {
         public string FullName { get; set; }
         public string Password { get; set; }

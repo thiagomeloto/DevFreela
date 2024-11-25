@@ -1,4 +1,5 @@
-﻿using DevFreela.Application.InputModels;
+﻿using DevFreela.Application.Commands.CreateUser;
+using DevFreela.Application.InputModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,9 +23,19 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] NewUserInputModel createUserModel)
+        public async Task<IActionResult> Post([FromBody] CreateUserCommand createUserModel)
         {
-            _mediator.Send(createUserModel);
+            if (!ModelState.IsValid)
+            {
+                var messages = ModelState
+                    .SelectMany(ms => ms.Value.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(messages);
+            }
+
+            await _mediator.Send(createUserModel);
 
             return CreatedAtAction(nameof(GetById), new { id = 1 }, createUserModel);
         }        

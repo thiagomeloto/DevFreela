@@ -212,3 +212,6 @@ C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevF
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\bin\Debug\net8.0\MediatR.dll
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\obj\Debug\net8.0\DevFreela.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
