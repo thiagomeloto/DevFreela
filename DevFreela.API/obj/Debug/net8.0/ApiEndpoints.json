@@ -146,7 +146,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "createUserModel",
+        "Name": "command",
         "Type": "DevFreela.Application.Commands.CreateUser.CreateUserCommand",
         "IsRequired": true
       }
@@ -164,6 +164,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DevFreela.API.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/users/login",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.LoginUser.LoginUserCommand",
         "IsRequired": true
       }
     ],
