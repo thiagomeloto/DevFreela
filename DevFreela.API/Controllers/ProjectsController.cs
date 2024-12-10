@@ -1,5 +1,7 @@
 ﻿using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.DeleteProject;
+using DevFreela.Application.Commands.FinishProject;
+using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.Queries.GetAllProjects;
 using MediatR;
@@ -43,7 +45,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "freelancer")]
+        [Authorize(Roles = "client")]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
             var id = await _mediator.Send(command);
@@ -84,18 +86,27 @@ namespace DevFreela.API.Controllers
         [Authorize(Roles = "client")]
         public async Task<IActionResult> Start(int id)
         {
-            await _mediator.Send(id);
+            var command = new StartProjectCommand(id);
+
+            await _mediator.Send(command);
 
             return NoContent();
         }
 
         [HttpPut("{id}/finish")]
         [Authorize(Roles = "client")]
-        public async Task<IActionResult> Finish(int id)
+        public async Task<IActionResult> Finish(int id, [FromBody] FinishProjectCommand command)
         {
-            await _mediator.Send(id);
+            command.Id = id;
 
-            return NoContent();
+            var result = await _mediator.Send(command);
+
+            if (!result)
+            {
+                return BadRequest("O pagamento não pôde ser processado.");
+            }
+
+            return Accepted();
         }
     }
 }

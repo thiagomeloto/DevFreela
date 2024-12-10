@@ -5,6 +5,7 @@ using DevFreela.Application.Validators;
 using DevFreela.Core.Repositories;
 using DevFreela.Core.Services;
 using DevFreela.Infrastructure.Auth;
+using DevFreela.Infrastructure.Payments;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
 using FluentValidation;
@@ -32,10 +33,13 @@ namespace DevFreela.API
             var connectionString = Configuration.GetConnectionString("DevFreelaCs");
             services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
 
+            services.AddHttpClient();
+
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IPaymentService, PaymentService>();
 
             //Singleton mantém o mesmo objeto para toda a aplicação. Mantém a mesma instância (mesmos dados) enquanto estiver inicializada.
             //services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });
@@ -44,7 +48,7 @@ namespace DevFreela.API
             //services.AddScoped<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });
 
             //Semelhante ao Scoped em que cada contexto seria sua própria instância. É a que tem o menor tempo de vida.
-            services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });
+            services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });            
 
             // Adiciona suporte a controladores
             services.AddControllers();

@@ -60,6 +60,11 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
             return project;
         }
 
+        public async Task SaveChangesAsync()
+        {
+            await _dbContext.SaveChangesAsync();
+        }
+
         public async Task StartAsync(int id)
         {
             var project = await _dbContext.Projects.SingleOrDefaultAsync(p => p.Id == id);
