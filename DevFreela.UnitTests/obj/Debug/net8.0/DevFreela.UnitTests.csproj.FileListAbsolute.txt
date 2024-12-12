@@ -167,3 +167,10 @@ C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevF
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\obj\Debug\net8.0\ref\DevFreela.UnitTests.dll
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Moq.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\thiag\Documents\MENTORIA - .NET EXPERT 2024\Projetos\1-AspNet-Core\DevFreela\DevFreela.UnitTests\bin\Debug\net8.0\RabbitMQ.Client.dll

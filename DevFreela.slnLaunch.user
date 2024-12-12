@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DevFreela.API\\DevFreela.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "IIS Express"
+      },
+      {
+        "Path": "DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "Action": "Start",
+        "DebugTarget": "DevFreela.Infrastructure"
+      }
+    ]
+  }
+]
